@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheets Data</title>
+</head>
+<body>
+    <h1>Data from Google Sheets</h1>
+    <div id="dataContainer"></div>
+
+    <script>
+        // Fetch data from Google Sheets API
+        fetch('https://sheets.googleapis.com/v4/spreadsheets/1y2cgQVPGDd_XJuV8aywtQVa52rqefLYcJnVvLVhcRfw/values/Sheet1!B2:B?key=AIzaSyDyn7WQTn4K4LktpGPRE16JEtkEbndLDJw')
+        .then(response => response.json())
+        .then(data => {
+            // Extract values from the response
+            const values = data.values;
+            // Initialize sum
+            let sum = 0;
+            // Iterate over values and sum them up
+            values.forEach(row => {
+                row.forEach(cell => {
+                    // Parse cell value to number and add to sum
+                    sum += parseFloat(cell) || 0;
+                });
+            });
+            // Display the sum in the HTML file
+            document.getElementById('dataContainer').innerText = "Sum of Column B: " + sum;
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    </script>
+</body>
+</html>
