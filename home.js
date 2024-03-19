@@ -44,13 +44,6 @@ function myFunction() {
     
  }
 
- document.getElementById("logout").addEventListener('click', () => {
-    // Clear browser history
-    window.history.replaceState({}, document.title, "/");
-    // Redirect to index.html
-    window.location.href = "index.html";
- });
-
 
 // sales - balance 
 // offline - expense
