@@ -44,6 +44,13 @@ function myFunction() {
     
  }
 
+ document.getElementById("logout").addEventListener('click', () => {
+    // Clear browser history
+    window.history.replaceState({}, document.title, "/");
+    // Redirect to index.html
+    window.location.href = "index.html";
+ });
+
 
 // sales - balance 
 // offline - expense
@@ -52,13 +59,14 @@ function myFunction() {
 
 
 var spreassheetID = '1y2cgQVPGDd_XJuV8aywtQVa52rqefLYcJnVvLVhcRfw'
-var api_key = 'AIzaSyDyn7WQTn4K4LktpGPRE16JEtkEbndLDJw'
+var api_key = 'AIzaSyDyn7WQTn4K4L'
+var api = 'ktpGPRE16JEtkEbndLDJw'
 var expense_sheet = 'Expense'
 var income_sheet = 'Income'
 var amount_cells = '!C2:C'
 
-var income_url = 'https://sheets.googleapis.com/v4/spreadsheets/' + spreassheetID +'/values/' + income_sheet + amount_cells + '?key=' + api_key
-var expense_url = 'https://sheets.googleapis.com/v4/spreadsheets/' + spreassheetID +'/values/' + expense_sheet + amount_cells + '?key=' + api_key
+var income_url = 'https://sheets.googleapis.com/v4/spreadsheets/' + spreassheetID +'/values/' + income_sheet + amount_cells + '?key=' + api_key + api
+var expense_url = 'https://sheets.googleapis.com/v4/spreadsheets/' + spreassheetID +'/values/' + expense_sheet + amount_cells + '?key=' + api_key +api
 
 var income_amt = 0.0
 var expense_amt = 0.0
