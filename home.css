@@ -62,7 +62,7 @@ body{
     color: var(--color-dark);
 }
 
-.home{
+#home{
     display: none;
 }
 
