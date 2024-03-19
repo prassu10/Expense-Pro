@@ -1,3 +1,27 @@
+document.getElementById("sign-in-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    // For demo purposes, check if username and password are valid
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+  
+    // Here you can implement your backend authentication logic
+    // For simplicity, let's consider username: "admin" and password: "password"
+    if (username === "admin" && password === "password") {
+        document.querySelector("#login-container").style.display = 'none';
+        document.querySelector("#home").style.display = 'block';
+    } else {
+        alert("Invalid username or password");
+    }
+  });
+
+ document.getElementById("logout").addEventListener('click', () => {
+    document.querySelector("#home").style.display = 'none';
+    document.querySelector("#login-container").style.display = 'block';
+ });
+
+
+
 const date = new Date();
 
 let day = date.getDate();
