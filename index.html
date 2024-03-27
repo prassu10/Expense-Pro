@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Document</title>
 
     <link href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.1-web/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="xyz.css">
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
 
@@ -36,233 +37,241 @@
 		</div>
 	</div>
 
-    <div id="home" style="display: none;">
-       
-        <div class="container dashboard">
-            <aside>
-                <div class="top">
-                    <div class="logo">
-                        <img src="logo.png" alt="">
-                        <h2>WALLE<span class="danger"> PRO</span></h2>
-                    </div>
-                    <div class="close" id="close-btn">
-                        <i class="fa-solid fa-xmark"></i>
-                    </div>
-                </div>
-
-                <div class="sidebar">
-                    <a href="#" class="active">
-                        <i class="fa-solid fa-chart-line"></i>
-                        <h3>Dashboard</h3>
-                    </a>
-                    <a href="#">
-                        <i class="fa-solid fa-credit-card"></i>
-                        <h3>View Transactions</h3>
-                    </a>
-                    <a href="#">
-                        <i class="fa-solid fa-money-bill-trend-up"></i>
-                        <h3>Incomes</h3>
-                    </a>
-                    <a href="#">
-                        <i class="fa-solid fa-money-bill-transfer"></i>
-                        <h3>Expenses</h3>
-                    </a>
-                    <a id="logout">
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                        <h3>Logout</h3>
-                    </a>
-                    
-                </div>
-            </aside>
-
-            <main>
-                <h1>Dashboard</h1>
-
-                <div class="date">
-                    <p class="today"></p>
-                </div>
-
-                <div class="insights">
-                    <div class="balance">
-                        <i class="fa-solid fa-sack-dollar"></i>
-                        <div class="middle">
-                            <div class="left">
-                                <h3>Total Balance</h3>
-                                <h1 id="balance">₹25,024</h1>
-                            </div>
-                        </div>
-                        <small class="text-muted">Last 24 Hours</small>
-                    </div>
-
-                        
-                    <div class="income">
-                        <i class="fa-solid fa-coins"></i>
-                        <div class="middle">
-                            <div class="left">
-                                <h3>Total Income</h3>
-                                <h1 id="income"></h1>
-                            </div>
-                        </div>
-                        <small class="text-muted">Last 24 Hours</small>
-                    </div>
-
-                    <div class="expenses">
-                        <i class="fa-solid fa-hand-holding-dollar"></i>
-                        <div class="middle">
-                            <div class="left">
-                                <h3>Total Expenses</h3>
-                                <h1 id="expense">₹2,000</h1>
-                            </div>
-                        </div>
-                        <small class="text-muted">Last 24 Hours</small>
-                    </div>
-                </div>
-
-                <div class="stats one">
-                    <h2>Spending Statistics</h2>
-                    <div class="graph">
-
-                    </div>
-                </div>
-            </main>
-
-            <div class="right">
-                <div class="top">
-                    <button id="menu-btn">
-                        <i id="menu-btn" class="fa-solid fa-bars"></i>
-                    </button>
-                    <div class="theme-toggler" onclick="myFunction()">
-                        <i class="fa-solid fa-sun active"></i>
-                        <i class="fa-solid fa-moon"></i>
-                    </div>
-                    <div class="profile">
-                        <div class="info">
-                            <p>Hey, <b>Prashanth</b></p>
-                            <small class="text-muted">Admin</small>
-                        </div>
-                        <div class="profile-photo">
-                            <img src="hey.png" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                
-
-                <div class="recent-transactions">
-                    <h2>Recent Transactions</h2>
-                    <div class="item">
-                        <div class="icon r-icon">
-                            <i class="fa-solid ri"></i>
-                        </div>
-                        <div class="right">
-                            <div class="info">
-                                <h3 id="r-title1"></h3>
-                            </div>
-                            <h3 id="r-amt1"></h3>
-                        </div>
-                    </div>
-                    
-                    <div class="item">
-                        <div class="icon r-icon">
-                            <i class="fa-solid ri"></i>
-                        </div>
-                        <div class="right">
-                            <div class="info">
-                                <h3 id="r-title2"></h3>
-                            </div>
-                            <h3 id="r-amt2"></h3>
-                        </div>
-                    </div>
-                    
-
-                    <div class="item">
-                        <div class="icon r-icon">
-                            <i class="fa-solid ri"></i>
-                        </div>
-                        <div class="right">
-                            <div class="info">
-                                <h3 id="r-title3"></h3>
-                            </div>
-                            <h3 id="r-amt3"></h3>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="icon r-icon">
-                            <i class="fa-solid ri"></i>
-                        </div>
-                        <div class="right">
-                            <div class="info">
-                                <h3 id="r-title4"></h3>
-                            </div>
-                            <h3 id="r-amt4"></h3>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="icon r-icon">
-                            <i class="fa-solid ri"></i>
-                        </div>
-                        <div class="right">
-                            <div class="info">
-                                <h3 id="r-title5"></h3>
-                            </div>
-                            <h3 id="r-amt5"></h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="piechart">
-                    <h2>Balances By Category</h2>
-                    <div class="pie">
-                        <div class="recent-transactions">
-                            <div class="item">
-                                <div class="icon r-icon">
-                                    <i class="fa-solid ri fa-building-columns"></i>
-                                </div>
-                                <div class="right">
-                                    <div class="info">
-                                        <h3 id="r-title1">Bank Balance</h3>
-                                    </div>
-                                    <h3 id="p-bank"></h3>
-                                </div>
-                            </div>
-                            
-                            <div class="item">
-                                <div class="icon r-icon">
-                                    <i class="fa-solid ri fa-wallet"></i>
-                                </div>
-                                <div class="right">
-                                    <div class="info">
-                                        <h3 id="r-title2">Cash Balance</h3>
-                                    </div>
-                                    <h3 id="p-cash"></h3>
-                                </div>
-                            </div>
-                            
+    <nav id="logo">
         
-                            <div class="item">
-                                <div class="icon r-icon">
-                                    <i class="fa-brands ri fa-cc-visa"></i>
-                                </div>
-                                <div class="right">
-                                    <div class="info">
-                                        <h3 id="r-title3">Meal Card Balance</h3>
-                                    </div>
-                                    <h3 id="p-card"></h3>
-                                </div>
-                            </div>
-                        </div>
-        
-                    </div>
-                </div>
 
-                
-
-            </div>  
+        <div class="logo">
+            <div class="menu" id="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <img src="logo.png" alt="">
+            <h2>WAL<span class="danger"> LET</span></h2>
         </div>
-    </div>
+        
+        
+
+        <div class="pp">
+            <div class="theme-toggler" onclick="myFunction()">
+                <i class="fa-solid fa-sun active"></i>
+                <i class="fa-solid fa-moon"></i>
+            </div>
+            <div class="profile">
+                <div class="info">
+                    <p>Hey, <b>Prashanth</b></p>
+                    <small class="text-muted">Admin</small>
+                </div>
+                <div class="profile-photo">
+                    <img src="hey.png" alt="">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="home">
+        <aside>
+            <div class="close" id="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="sidebar">
+                <a id="dsh-btn" class="active">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Dashboard</h3>
+                </a>
+                <a id="trn-btn">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <h3>View Transactions</h3>
+                </a>
+                <a id="inc-btn">
+                    <i class="fa-solid fa-money-bill-trend-up"></i>
+                    <h3>Incomes</h3>
+                </a>
+                <a id="exp-btn">
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                    <h3>Expenses</h3>
+                </a>
+                <a id="logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <h3>Logout</h3>
+                </a>
+                
+            </div>
+        </aside>
+
+        <main>
+            <div id="dashboard">
+                <div class="l">
+                    <h1>Dashboard</h1>
+
+                    <div class="date">
+                        <p class="today">27-03-2024</p>
+                    </div>
+
+                    <div class="insights">
+                        <div class="balance">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                            <div class="middle">
+                                <div class="left">
+                                    <h3>Total Balance</h3>
+                                    <h1 id="balance">₹25,024</h1>
+                                </div>
+                            </div>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+
+                            
+                        <div class="income">
+                            <i class="fa-solid fa-coins"></i>
+                            <div class="middle">
+                                <div class="left">
+                                    <h3>Total Income</h3>
+                                    <h1 id="income">₹2,000</h1>
+                                </div>
+                            </div>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+
+                        <div class="expenses">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                            <div class="middle">
+                                <div class="left">
+                                    <h3>Total Expenses</h3>
+                                    <h1 id="expense">₹2,000</h1>
+                                </div>
+                            </div>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+                    </div>
+
+                    <div class="stats one">
+                        <h2>Spending Statistics</h2>
+                        <div class="graph">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="r">
+                    <div class="recent-transactions">
+                        <h2>Recent Transaction</h2>
+                        <div class="item">
+                            <div class="icon r-icon">
+                                <i class="fa-solid ri"></i>
+                            </div>
+                            <div class="right">
+                                <div class="info">
+                                    <h3 id="r-title1"></h3>
+                                </div>
+                                <h3 id="r-amt1"></h3>
+                            </div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="icon r-icon">
+                                <i class="fa-solid ri"></i>
+                            </div>
+                            <div class="right">
+                                <div class="info">
+                                    <h3 id="r-title2"></h3>
+                                </div>
+                                <h3 id="r-amt2"></h3>
+                            </div>
+                        </div>
+                        
     
+                        <div class="item">
+                            <div class="icon r-icon">
+                                <i class="fa-solid ri"></i>
+                            </div>
+                            <div class="right">
+                                <div class="info">
+                                    <h3 id="r-title3"></h3>
+                                </div>
+                                <h3 id="r-amt3"></h3>
+                            </div>
+                        </div>
+    
+                        <div class="item">
+                            <div class="icon r-icon">
+                                <i class="fa-solid ri"></i>
+                            </div>
+                            <div class="right">
+                                <div class="info">
+                                    <h3 id="r-title4"></h3>
+                                </div>
+                                <h3 id="r-amt4"></h3>
+                            </div>
+                        </div>
+    
+                        <div class="item">
+                            <div class="icon r-icon">
+                                <i class="fa-solid ri"></i>
+                            </div>
+                            <div class="right">
+                                <div class="info">
+                                    <h3 id="r-title5"></h3>
+                                </div>
+                                <h3 id="r-amt5"></h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="piechart">
+                        <h2>Balances By Category</h2>
+                        <div class="pie">
+                            <div class="recent-transactions">
+                                <div class="item">
+                                    <div class="icon r-icon">
+                                        <i class="fa-solid ri fa-building-columns"></i>
+                                    </div>
+                                    <div class="right">
+                                        <div class="info">
+                                            <h3 id="r-title1">Bank Balance</h3>
+                                        </div>
+                                        <h3 id="p-bank"></h3>
+                                    </div>
+                                </div>
+                                
+                                <div class="item">
+                                    <div class="icon r-icon">
+                                        <i class="fa-solid ri fa-wallet"></i>
+                                    </div>
+                                    <div class="right">
+                                        <div class="info">
+                                            <h3 id="r-title2">Cash Balance</h3>
+                                        </div>
+                                        <h3 id="p-cash"></h3>
+                                    </div>
+                                </div>
+                                
+            
+                                <div class="item">
+                                    <div class="icon r-icon">
+                                        <i class="fa-brands ri fa-cc-visa"></i>
+                                    </div>
+                                    <div class="right">
+                                        <div class="info">
+                                            <h3 id="r-title3">Meal Card Balance</h3>
+                                        </div>
+                                        <h3 id="p-card"></h3>
+                                    </div>
+                                </div>
+                            </div>
+            
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+            
+            <div id="recent-transactions" style="display: none;">hello</div>
+            <div id="expense-tab" style="display: none;">1</div>
+            <div id="income-tab" style="display: none;">2</div>
+            
+        </main>
+
+
+    </div>
+
     <script src="home.js"></script>
 </body>
 </html>

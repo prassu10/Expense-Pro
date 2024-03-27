@@ -9,16 +9,77 @@ document.getElementById("sign-in-form").addEventListener("submit", function(even
     // For simplicity, let's consider username: "admin" and password: "password"
     if (username === "admin" && password === "password") {
         document.querySelector("#login-container").style.display = 'none';
-        document.querySelector("#home").style.display = 'block';
+        
     } else {
         alert("Invalid username or password");
     }
   });
 
- document.getElementById("logout").addEventListener('click', () => {
-    document.querySelector("#home").style.display = 'none';
+  document.getElementById("logout").addEventListener('click', () => {
     document.querySelector("#login-container").style.display = 'block';
- });
+
+    document.querySelector("aside").style.display = 'none';
+});
+
+document.getElementById("dsh-btn").addEventListener('click', () => {
+    document.querySelector("#dashboard").style.display = 'flex';
+    document.querySelector("#recent-transactions").style.display = 'none';
+    document.querySelector("#expense-tab").style.display = 'none';
+    document.querySelector("#income-tab").style.display = 'none';
+
+    document.getElementById("dsh-btn").classList.add("active");
+    document.getElementById("trn-btn").classList.remove("active");
+    document.getElementById("inc-btn").classList.remove("active");
+    document.getElementById("exp-btn").classList.remove("active");
+
+    document.querySelector("aside").style.display = 'none';
+});
+
+document.getElementById("trn-btn").addEventListener('click', () => {
+    document.querySelector("#dashboard").style.display = 'none';
+    document.querySelector("#recent-transactions").style.display = 'flex';
+    document.querySelector("#expense-tab").style.display = 'none';
+    document.querySelector("#income-tab").style.display = 'none';
+
+    document.getElementById("dsh-btn").classList.remove("active");
+    document.getElementById("trn-btn").classList.add("active");
+    document.getElementById("inc-btn").classList.remove("active");
+    document.getElementById("exp-btn").classList.remove("active");
+
+    document.querySelector("aside").style.display = 'none';
+});
+
+document.getElementById("inc-btn").addEventListener('click', () => {
+    document.querySelector("#dashboard").style.display = 'none';
+    document.querySelector("#recent-transactions").style.display = 'none';
+    document.querySelector("#expense-tab").style.display = 'flex';
+    document.querySelector("#income-tab").style.display = 'none';
+
+    document.getElementById("dsh-btn").classList.remove("active");
+    document.getElementById("trn-btn").classList.remove("active");
+    document.getElementById("inc-btn").classList.add("active");
+    document.getElementById("exp-btn").classList.remove("active");
+
+    document.querySelector("aside").style.display = 'none';
+});
+
+document.getElementById("exp-btn").addEventListener('click', () => {
+    document.querySelector("#dashboard").style.display = 'none';
+    document.querySelector("#recent-transactions").style.display = 'none';
+    document.querySelector("#expense-tab").style.display = 'none';
+    document.querySelector("#income-tab").style.display = 'flex';
+
+    document.getElementById("dsh-btn").classList.remove("active");
+    document.getElementById("trn-btn").classList.remove("active");
+    document.getElementById("inc-btn").classList.remove("active");
+    document.getElementById("exp-btn").classList.add("active");
+
+    document.querySelector("aside").style.display = 'none';
+});
+
+
+
+
 
 
 
@@ -56,12 +117,6 @@ closeBtn.addEventListener('click',() => {
     sideMenu.style.display = 'none';
 })
 
-// themeToggler.addEventListener('click',() =>{
-//     document.body.classList.toggle('dark-theme-variables')
-
-//     themeToggler.querySelector('i:nth-child(1)').classList.toggle('active')
-//     themeToggler.querySelector('i:nth-child(2)').classList.toggle('active')
-// })
 
 function myFunction() {
     document.body.classList.toggle('dark-theme-variables')
@@ -87,7 +142,9 @@ var categoryIcons = {
     'Spend': 'fa-comment-dollar',
     'Smoke': 'fa-smoking',
     'Betting': 'fa-biohazard',
-    'Grooming': 'fa-scissors'
+    'Grooming': 'fa-scissors',
+    'Gaming': 'fa-headset',
+    'Question': 'fa-question'
 };
 
 var spreassheetID = '1y2cgQVPGDd_XJuV8aywtQVa52rqefLYcJnVvLVhcRfw'
